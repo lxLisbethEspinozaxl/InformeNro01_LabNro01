@@ -11,7 +11,8 @@
 	\\go
 	\\
 	\begin{center}
-	\includegraphics[width=10cm]{./Imagenes/img01} 
+	\includegraphics[width=5cm]{./Imagenes/actividad_06_01a}
+	\includegraphics[width=5cm]{./Imagenes/actividad_06_01}
 	\end{center}
 
 	\item Realizar una consulta que muestre el Apellido del empleado, fecha de contratación y la Fecha de Revisión del Salario, la cual es el primer Lunes después de cada seis meses de servicio, etiquetar la columna como Revisión, asimismo el formato de esta fecha debe ser similar al siguiente: 
@@ -24,7 +25,8 @@
 	\\go
 	
 	\begin{center}
-	\includegraphics[width=10cm]{./Imagenes/img02} 
+	\includegraphics[width=5cm]{./Imagenes/actividad_06_02a}
+	\includegraphics[width=5cm]{./Imagenes/actividad_06_02}
 	\end{center}
 
 	\item Mostrar un reporte que tenga los Apellidos, Fecha de Contrataci\'on y el D\'ia de Inicio de cada empleado (Lunes, Martes, etc…), etiquetar la \'ultima columna como D\'ia. Ordenar los resultados por el D\'ia de Inicio empezando por Lunes.
@@ -35,49 +37,9 @@
 	\\go
 	\\
 	\begin{center}
-	\includegraphics[width=10cm]{./Imagenes/img03} 
+	\includegraphics[width=5cm]{./Imagenes/actividad_06_03a}
+	\includegraphics[width=5cm]{./Imagenes/actividad_06_03}
 	\end{center}
 
-	\item Crear un listado que muestre los Apellidos de los empleados y sus Montos de Comisión, en caso no tenga comisi\'on deber\'a mostrar el texto ‘Sin Comisi\'on’, etiquetar esta ultima columna como Comisi\'on.	
-	\\
-	\\select last\_name as 'Apellidos', 'Comision'='Sin Comision' from dbo.employees where 
-	\\commission\_pct <= 0 
-	\\UNION
-	\\select last\_name as 'Apellidos', 'Comision'= Cast((salary * commission\_pct) as 	
-	\\varchar(20)) from dbo.employees where commission\_pct > 0
-	\\go
-	\\
-	\begin{center}
-	\includegraphics[width=10cm]{./Imagenes/img04} 
-	\end{center}
-
-	\item Utilizando la función DECODE, crear un reporte que muestre los apellidos, los puestos y los grados de los empleados basados en sus puestos, utilizando la siguiente información:
-	\begin{center}
-		\begin{tabular}{ c c }
-		Puesto & Grado \\
-		\hline
-		AD\_PRES & A \\
-		ST\_MAN & B \\
-		IT\_PROG & C \\
-		SA\_REP & D \\
-		ST\_CLERK & E \\
-		Ninguno de los Anteriores & 0 \\
-		\end{tabular}
-	\end{center}
-	\item Rescribir la consulta anterior utilizando la función CASE.
-	\\
-	\\select e.last\_name as 'Apellidos', j.job\_title, case 
-	\\when j.job\_id = 'AD\_PRES' THEN 'A'
-	\\when j.job\_id = 'ST\_MAN' THEN 'B'
-	\\when j.job\_id = 'IT\_PROG' THEN 'C'
-	\\when j.job\_id = 'SA\_REP' THEN 'D'
-	\\else '0' END as 'Grados' from dbo.employees as e inner join dbo.jobs as j on 
-	\\e.job\_id=j.job\_id
-	\\go
-	\\
-
-	\begin{center}
-	\includegraphics[width=10cm]{./Imagenes/img06} 
-	\end{center}
 \end{enumerate}
 

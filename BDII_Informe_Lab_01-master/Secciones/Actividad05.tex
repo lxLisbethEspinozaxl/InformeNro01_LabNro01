@@ -10,6 +10,7 @@
 	\\,CONVERT (date, GETDATE())
     	\\,CONVERT (date, GETUTCDATE());
 	\begin{center}
+	\includegraphics[width=5cm]{./Imagenes/actividad_05_01a}
 	\includegraphics[width=5cm]{./Imagenes/actividad_05_01}
 	\end{center}
 	
@@ -17,6 +18,7 @@
 	\\
 	\\SELECT employee\_id,last\_name,salary,salary*0.155 as newsalary FROM employees
 	\begin{center}
+	\includegraphics[width=5cm]{./Imagenes/actividad_05_02a}
 	\includegraphics[width=5cm]{./Imagenes/actividad_05_02}
 	\end{center}
 
@@ -24,6 +26,7 @@
 	\\
 	\\SELECT employee\_id,last\_name,salary,salary*0.155 as newsalary,salary-(salary*0.155) as incremento FROM employees
 	\begin{center}
+	\includegraphics[width=5cm]{./Imagenes/actividad_05_03a}
 	\includegraphics[width=5cm]{./Imagenes/actividad_05_03}
 	\end{center}
 
@@ -35,18 +38,25 @@
      	\\ or last\_name like 'J\%'
       	\\or last\_name like 'M\%' order by last\_name asc;
       	\begin{center}
+	\includegraphics[width=5cm]{./Imagenes/actividad_05_04a}
 	\includegraphics[width=5cm]{./Imagenes/actividad_05_04}
 	\end{center}
 
 	\item Modificar la consulta anterior a fin de que consulte primero al usuario con que letra empieza el apellido a buscar. Considerar que no importa si la letra esta may\'uscula o min\'uscula de igual manera debe mostrar los resultados.
 	\\
 	\\select initcap(FIRST\_NAME) as "name", length(first\_name) as "Length" from employees where upper(substr(first\_name,1,1))=upper('\&Inicial') order by first\_name;
-
+	\begin{center}
+	\includegraphics[width=5cm]{./Imagenes/actividad_05_05a}
+	\includegraphics[width=5cm]{./Imagenes/actividad_05_05}
+	\end{center}
 	\item El departamento de Recursos Humanos la duración o tiempo de permanencia de cada empleado, mostrar el Apellido y el calculo del número de meses entre la fecha de hoy y la fecha en que fue contratado el empleado, Etiquetar la columna como Meses Trabajados, ordenar los resultados por el resultado de los n\'umeros de meses, Redondear el número de meses al entero más cercano.
 	\\
 	\\SELECT LAST\_NAME, ROUND(MONTHS\_BETWEEN(SYSDATE,HIRE\_DATE),0) "MONTHS\_WORKED"
 	\\from employees order by MONTHS\_BETWEEN( HIRE\_DATE, SYSDATE);
-
+	\begin{center}
+	\includegraphics[width=5cm]{./Imagenes/actividad_05_06a}
+	\includegraphics[width=5cm]{./Imagenes/actividad_05_06}
+	\end{center}
 	\item Crear una consulta que devuelva los Apellidos y Salarios de todos los empleados, Formatear la columna salario para que muestre 15 caracteres, completar con el símbolo ‘\$’ los espacios previos al valor de la columna salario, ejemplo: \$\$\$\$\$\$\$\$\$\$10000. Etiquetar esta columna como Salario.
 	\\
 	\\CREATE FUNCTION LPAD
@@ -64,6 +74,7 @@
 	\\SELECT dbo.LPAD(salary, 15, '\$') VALUE
 	\\FROM employees;
 	\begin{center}
+		\includegraphics[width=5cm]{./Imagenes/actividad_05_07a}
 		\includegraphics[width=5cm]{./Imagenes/actividad_05_07}
 	\end{center}
 
@@ -71,5 +82,8 @@
 	\item Finalmente crear una consulta que muestre los Apellidos de los empleados y el No de Semanas Empleado hasta la actualidad para todos los empleados del departamento No 90, truncar el número de semanas a sin decimales. Ordenar el resultado por el No de Semanas y etiquetar la columna como tenencia.
 	\\
 	\\select last\_name, TRUNC(((SYSDATE-hire\_date)/7),0) as TENURE from employees where department\_id=90 ORDER BY hire\_date DESC;
+	\begin{center}
+		\includegraphics[width=5cm]{./Imagenes/actividad_05_08}
+	\end{center}
 \end{enumerate}
 
