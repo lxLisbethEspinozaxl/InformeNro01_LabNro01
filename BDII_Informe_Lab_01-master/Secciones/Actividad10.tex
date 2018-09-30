@@ -1,6 +1,4 @@
 \section{Actividad No 10 – Conjuntos} 
-		
-
 
 \begin{enumerate}[1.]
 	\item El departamento de Recursos Humanos requiere un reporte de todos los departamentos que no contengan un empleado con el puesto ‘ST\_CLERK’. Utilizar el operador MINUS o EXCEPT para esta solicitud.
@@ -49,10 +47,12 @@
 	\item El departamento de Recursos Humanos requiere un reporte que muestre lo siguiente:
 
 	\begin{itemize}
-		\item Apellidos y c\'odigos de departamentos de todos los registros de la tabla empleados sin importar si pertenecen a uno o ningún departamento.
-		\item C\'odigo de departamentos y nombres de departamentos de la tabla DEPARTAMENTOS inclusive si no existiese ningún empleado en ese departamento
+	\item Apellidos y c\'odigos de departamentos de todos los registros de la tabla empleados sin importar si pertenecen a uno o ningún departamento.
+	\item C\'odigo de departamentos y nombres de departamentos de la tabla DEPARTAMENTOS inclusive si no existiese ningún empleado en ese departamento
 	\end{itemize}
 	Ambos requerimientos se deben mostrar en un mismo resultado. Utilizar el operador UNION ALL.
+	\\
+	\\Para lo cual se observa el siguiente codigo:
 	\\
 	\\select last\_name, department\_id, null from employees union select null, department\_id, department\_name from departments;
 

@@ -1,7 +1,9 @@
 \section{Actividad No 08 – Enlaces} 
 		
 \begin{enumerate}[1.]
-	\item El departamento de Recursos Humanos requiere un reporte que muestre las direcciones de todos los departamentos. Utilizar las tablas LOCATIONS y COUNTRIES. Mostrar el ID de la Ubicación (location\_id), dirección (street\_address), ciudad (city), estado o provincia (state\_province) y país (country\_name). % Utilizar NATURAL JOIN para producir el resultado.
+	\item El departamento de Recursos Humanos requiere un reporte que muestre las direcciones de todos los departamentos. Utilizar las tablas LOCATIONS y COUNTRIES. Mostrar el ID de la Ubicación (location\_id), dirección (street\_address), ciudad (city), estado o provincia (state\_province) y país (country\_name). 
+	\\
+	\\% Utilizar NATURAL JOIN para producir el resultado.
 	\\
 	\\select l.location\_id , l.street\_address , l.city , l.state\_province , c.country\_name 
 	\\from locations as l 
@@ -84,13 +86,13 @@
 	\\ON (davies.last\_name = 'Davies')
 	\\WHERE davies.hire\_date <  e.hire\_date;\\
 
-
 	\begin{center}
 	\includegraphics[width=17cm]{./Imagenes/Actividad8-Ejercicio07} 
 	\end{center}
 
-
 	\item El departamento de Recursos Humanos requiere de un reporte que el apellido del empleado, fecha de contrataci\'on del empleado, apellido del administrador, fecha de contratación del administrador. Para todos aquellos empleados que fueron contratados antes que sus Administradores.
+	\\
+	\\Ingresar el siguiente codigo:
 	\\
 	\\SELECT e.last\_name 'EMPLEADO', e.hire\_date 'FECHA CONTRATACION' , j.last\_name 'ADMINISTRADOR',
 	\\j.hire\_date 'FECHA CONTRATACION ADMINISTRADOR'
