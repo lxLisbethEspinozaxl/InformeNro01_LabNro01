@@ -5,7 +5,7 @@
 	\\ \\ select last\_name,salary from employees where salary > 12000;
 
 	\begin{center}
-	\includegraphics[width=5cm]{./Imagenes/actividad_04_01a} 
+	\includegraphics[width=13cm]{./Imagenes/actividad_04_01a} 
 	\includegraphics[width=5cm]{./Imagenes/actividad_04_01} 
 	\end{center}
 
@@ -13,7 +13,7 @@
 	\\ \\select last\_name,department\_id from employees where employee\_id > 176;
 
 	\begin{center}
-	\includegraphics[width=5cm]{./Imagenes/actividad_04_02a}
+	\includegraphics[width=14cm]{./Imagenes/actividad_04_02a}
 	\includegraphics[width=5cm]{./Imagenes/actividad_04_02} 
 	\end{center}
 
@@ -21,7 +21,7 @@
 	\\ \\select last\_name,job\_id,salary as Sal from employees where salary > 5000 and salary < 12000;
 
 	\begin{center}
-	\includegraphics[width=5cm]{./Imagenes/actividad_04_03a} 
+	\includegraphics[width=14cm]{./Imagenes/actividad_04_03a} 
 	\includegraphics[width=5cm]{./Imagenes/actividad_04_03} 
 	\end{center}
 
@@ -29,15 +29,15 @@
 	\\ \\select last\_name,job\_id,hire\_date from employees where last\_name = 'Matos' or last\_name = 'Taylor' order by hire\_date asc;
 
 	\begin{center}
-	\includegraphics[width=5cm]{./Imagenes/actividad_04_04a} 
-	\includegraphics[width=5cm]{./Imagenes/actividad_04_04} 
+	\includegraphics[width=14cm]{./Imagenes/actividad_04_04a} 
+	\includegraphics[width=6cm]{./Imagenes/actividad_04_04} 
 	\end{center}
 
 	\item Mostrar los apellidos (last\_name) y n\'umero de departamento (departamento\_id) de todos los empleados que pertenezcan a los departamentos 20 o 50 en orden alfab\'etico ascendente por el apellido.
 	\\ \\select last\_name,department\_id from employees where department\_id = 20 or department\_id = 50 order by last\_name asc;
 	
 	\begin{center}
-	\includegraphics[width=5cm]{./Imagenes/actividad_04_05a}
+	\includegraphics[width=13cm]{./Imagenes/actividad_04_05a}
 	\includegraphics[width=5cm]{./Imagenes/actividad_04_05} 
 	\end{center}
 	
@@ -45,7 +45,7 @@
 	\\ \\select last\_name 'Empleado',salary 'Salario Mensual' from employees where salary > 5000 and salary < 12000 and (department\_id = 20 or department\_id = 50);
 
 	\begin{center}
-	\includegraphics[width=5cm]{./Imagenes/actividad_04_06a}
+	\includegraphics[width=15cm]{./Imagenes/actividad_04_06a}
 	\includegraphics[width=5cm]{./Imagenes/actividad_04_06} 
 	\end{center}
 
@@ -53,7 +53,7 @@
 	\\ \\select last\_name,hire\_date from employees where hire\_date between '19940101' and '19941231';
 
 	\begin{center}
-	\includegraphics[width=5cm]{./Imagenes/actividad_04_07a}
+	\includegraphics[width=15cm]{./Imagenes/actividad_04_07a}
 	\includegraphics[width=5cm]{./Imagenes/actividad_04_07} 
 	\end{center}
 
@@ -61,7 +61,7 @@
 	\\ \\select last\_name,job\_id from employees where manager\_id is null;
 
 	\begin{center}
-	\includegraphics[width=5cm]{./Imagenes/actividad_04_08a} 
+	\includegraphics[width=13cm]{./Imagenes/actividad_04_08a} 
 	\includegraphics[width=5cm]{./Imagenes/actividad_04_08} 
 	\end{center}
 
@@ -69,8 +69,8 @@
 	\\ \\select last\_name,salary,commission\_pct from employees order by salary desc,commission\_pct desc;
 
 	\begin{center}
-	\includegraphics[width=5cm]{./Imagenes/actividad_04_09a} 
-	\includegraphics[width=5cm]{./Imagenes/actividad_04_09} 
+	\includegraphics[width=16cm]{./Imagenes/actividad_04_09a} 
+	\includegraphics[width=6cm]{./Imagenes/actividad_04_09} 
 	\end{center}
 
 
@@ -78,7 +78,7 @@
 	\\ \\declare @salario as decimal(9,2); set @salario = 12000; select last\_name,salary from employees where salary > @salario;
 
 	\begin{center}
-	\includegraphics[width=5cm]{./Imagenes/actividad_04_10a} 
+	\includegraphics[width=16cm]{./Imagenes/actividad_04_10a} 
 	\includegraphics[width=5cm]{./Imagenes/actividad_04_10} 
 	\end{center}
 
@@ -96,8 +96,8 @@
 	\\go
 	
 	\begin{center}
-	\includegraphics[width=5cm]{./Imagenes/actividad_04_11a} 
-	\includegraphics[width=5cm]{./Imagenes/actividad_04_11} 
+	\includegraphics[width=16cm]{./Imagenes/actividad_04_11a} 
+	\includegraphics[width=8cm]{./Imagenes/actividad_04_11} 
 	\end{center}
 
 	\item Generar un listado de apellidos (last\_name) de todos los empleados que tengan la letra ‘a’ en la tercera letra de su apellido.
@@ -105,7 +105,7 @@
 	\\go
 
 	\begin{center}
-	\includegraphics[width=5cm]{./Imagenes/actividad_04_12a} 
+	\includegraphics[width=14cm]{./Imagenes/actividad_04_12a} 
 	\includegraphics[width=5cm]{./Imagenes/actividad_04_12} 
 	\end{center}
 
@@ -114,7 +114,7 @@
 	\\go
 
 	\begin{center}
-	\includegraphics[width=5cm]{./Imagenes/actividad_04_13a} 
+	\includegraphics[width=15cm]{./Imagenes/actividad_04_13a} 
 	\includegraphics[width=5cm]{./Imagenes/actividad_04_13} 
 	\end{center}
 
@@ -123,7 +123,7 @@
 	\\go
 
 	\begin{center}
-	\includegraphics[width=5cm]{./Imagenes/actividad_04_14a} 
+	\includegraphics[width=16cm]{./Imagenes/actividad_04_14a} 
 	\includegraphics[width=5cm]{./Imagenes/actividad_04_14} 
 	\end{center}
 
@@ -132,7 +132,7 @@
 	\\go
 
 	\begin{center}
-	\includegraphics[width=5cm]{./Imagenes/actividad_04_15a} 
+	\includegraphics[width=15cm]{./Imagenes/actividad_04_15a} 
 	\includegraphics[width=5cm]{./Imagenes/actividad_04_15} 
 	\end{center}
 
